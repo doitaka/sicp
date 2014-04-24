@@ -1,0 +1,10 @@
+(define (sqrtsum2of3 x y z)
+  		(cond ((and (>= x z) (>= y z)) (+ (* x x) (* y y)))
+			  ((and (>= x y) (>= z y)) (+ (* x x) (* z z)))
+			  ((and (>= y x) (>= z x)) (+ (* y y) (* z z)))
+			  )
+		)
+
+(define (main args)
+  (print (apply sqrtsum2of3 (map string->number (cdr args))))
+  0)
