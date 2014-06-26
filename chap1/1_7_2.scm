@@ -20,7 +20,7 @@
 
 (define (good-enough? guess x)
   (define new-guess (improve guess x))
-  (< (/ (abs (- guess new-guess)) (abs guess)) 0.001)
+  (< (/ (abs (- (square guess) (square new-guess))) (abs guess)) 0.001)
   )
 
 (define (square-root x)
